@@ -1,0 +1,280 @@
+{  
+  "Version": "1.8.13",
+  
+  
+  "Keegen": {
+    "password":"amongus",
+    "status":"Admin",
+    "level": "11",
+    "xp": "1",    
+    
+    "Uno": "1",
+    "Tetris": "3",
+    "tfe": "2",
+    "Galaga": "1",
+    "Wordle": "3",
+    "Battleship": "1",
+    
+    "uno": "0",
+    "unoFlip": "3",
+    "uno50": "1",
+    "unoDare": "2",
+    "unoAllWild": "0",
+    "dos": "0",
+    "unoOnline": "1",
+    "tetris": "88 Lines",
+    "pfp": "https://cdn.glitch.global/ec718c4b-581f-4afc-848d-2eba19a4d0c0/BOgwprmCEAAvjq3%20(1).jpg?v=1652334960110"
+  },
+
+  "Bricen": {
+    "password":"bacon",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "0",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+  },
+
+  "Damen": {
+    "password":"sus",
+
+    "status":"Admin",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "1",
+    "Tetris": "2",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "3",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "1",
+    "uno50": "Thirteen",
+    "unoDare": "1",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "72 Lines"
+  },
+
+  "Zane": {
+    "password":"",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "0",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+  },
+
+  "DameDalla": {
+    "password":"",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "1",
+    "unoFlip": "0",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+  },
+
+  "Vaughn": {
+    "password":"furrypourn",
+
+    "status":"Admin",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "1",
+    "tfe": "1",
+    "Galaga": "1",
+    "Wordle": "2",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "1",
+    "uno50": "2",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "3",
+    "dos": "0",
+    "tetris": "81 Lines",
+    "pfp": ""
+  },
+
+  "Cyrus": {
+    "password":"",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "1",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+    
+  },
+  
+  "Steven": {
+    "password":"",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "0",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+  },
+  
+  "Cheyenne": {
+    "password":"",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "0",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+  },
+  
+  "Larissa": {
+    "password":"",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",    
+    
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "0",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+  },
+  
+  
+  
+  
+  "Guest": {
+    "password":"",
+
+    "status":"Regular",
+    "level": "1",
+    "xp": "1",  
+    "Uno": "0",
+    "Tetris": "0",
+    "tfe": "0",
+    "Galaga": "0",
+    "Wordle": "0",
+    "Battleship": "0",
+    
+    "uno": "0",
+    "unoFlip": "0",
+    "uno50": "0",
+    "unoDare": "0",
+    "unoAllWild": "0",
+    "unoOnline": "0",
+    "dos": "0",
+    "tetris": "0 Lines",
+    "pfp": ""
+    }
+}
