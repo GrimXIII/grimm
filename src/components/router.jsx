@@ -15,6 +15,8 @@ import doogle6 from "../pages/doogle/doogleDomains"
 import doogle7 from "../pages/doogle/doogleApps"
 import doogle8 from "../pages/doogle/doogleNews"
 import leader from "../pages/leader"
+import info from "../pages/info"
+import edit from "../pages/editor"
 
 import error from "../pages/404"
 
@@ -37,6 +39,8 @@ export default () => (
       <Route path="/doogleNews" component={doogle8} />
       <Route path="/leader" component={leader} />
       <Route path="/admin" component={admin} />
+      <Route path="/info" component={info} />
+      <Route path="/edit" component={edit} />
     
       <Route path="/:rest*" component={error} />
    </Switch>

@@ -23,7 +23,7 @@ export default function Home() {
   const [text, setText] = useState(" ")
 
 
-  
+
   function profile() {
     setAnim("popDown 1s forwards")
     setAss("dudeStop")
@@ -258,7 +258,7 @@ function begin() {
           
           {/* Info */}
           <div className="dropdown1">
-            <img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/i.png?v=1655833777099"/>
+            <Link href="/info"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/i.png?v=1655833777099"/></Link>
           </div>
           
           {admin}
