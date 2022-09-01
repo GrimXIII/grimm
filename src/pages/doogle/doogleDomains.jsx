@@ -1,13 +1,34 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { RemoveScrollBar } from 'react-remove-scroll-bar';
 import { useCookies } from "react-cookie";
-
+import database from "../../../database.json";
 
 export default function Home() {
+  useEffect(() => {
+  check()
+  }, []);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+
+  
   
   function mail() {
     window.location.replace("mailto:khendrickson@sb.k12.wi.us")
+  }
+  
+  const [nice, setNice] = useState()
+  
+  function check() {
+    if (database[cookies.Name].domain == "true") {
+    setNice(      
+      <div style={{ backgroundColor:"orange", borderRadius:"10px", padding:"10px", width:"800px" }}>
+        <h1 style={{color:"black", fontSize:"40px"}}>Nice! You got one!</h1>
+        <p1 style={{color:"black"}}>
+          It appears that you own a Domain, if you want to work on coding it, the editor is right <Link href="/edit">Here!</Link>
+        </p1>
+      </div>
+      )
+    }
   }
   
   return (
@@ -145,6 +166,10 @@ export default function Home() {
           Email Me!
         </button>
       </div>
+      <br/>
+      {nice}
+      <br/>
+      <br/>
     </>
   );
 }

@@ -7,6 +7,7 @@
     "status":"Admin",
     "level": "11",
     "xp": "1",    
+    "domain": "true",
     
     "Uno": "1",
     "Tetris": "3",
@@ -32,6 +33,7 @@
     "status":"Regular",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "0",
     "Tetris": "0",
@@ -57,6 +59,7 @@
     "status":"Admin",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "1",
     "Tetris": "2",
@@ -81,6 +84,7 @@
     "status":"Regular",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "0",
     "Tetris": "0",
@@ -106,6 +110,7 @@
     "status":"Regular",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "0",
     "Tetris": "0",
@@ -131,6 +136,7 @@
     "status":"Admin",
     "level": "1",
     "xp": "1",    
+    "domain": "true",
     
     "Uno": "0",
     "Tetris": "1",
@@ -156,6 +162,7 @@
     "status":"Regular",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "0",
     "Tetris": "0",
@@ -182,6 +189,7 @@
     "status":"Regular",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "0",
     "Tetris": "0",
@@ -207,6 +215,7 @@
     "status":"Regular",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "0",
     "Tetris": "0",
@@ -232,6 +241,7 @@
     "status":"Regular",
     "level": "1",
     "xp": "1",    
+    "domain": "false",
     
     "Uno": "0",
     "Tetris": "0",
