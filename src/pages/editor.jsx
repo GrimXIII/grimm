@@ -57,12 +57,62 @@ export default function Home() {
 
   return (
     <>
+      <table className="items">
+        <tr>
+          <th><div className="spot1"></div></th>
+          <th><div className="spot2"><br/>&nbsp;&nbsp;Help</div></th>
+        </tr>
+        <tr>
+          <th><div className="main">
+            <table style={{ padding:"10px" }}>
+              <tr>
+                <h1 style={{ color:'black', fontSize:'25px' }}>
+                  HTML
+                </h1>
+                <p1>
+                  HTML is somewhat simple, start with a {"<div>"} tag, and start typing stuff! there are things like {'<button> <iframe> <table>'}.
+                </p1>
+              </tr>
+              <tr>
+                <h1 style={{ color:'black', fontSize:'25px' }}>
+                  CSS
+                </h1>
+                <p1>
+                  CSS is the thing that styles items. Before you type {">"} for a tag, type class="whatever you wanna call it". then in CSS, type ".whateverItsCalled {}" and inside the curved parentasis, add things! like {"background-color:orange;"}
+                </p1>
+              </tr>              
+              <tr>
+                <h1 style={{ color:'black', fontSize:'25px' }}>
+                  Java
+                </h1>
+                <p1>
+                  Honestly, I dont think this works, but I put it here in case it does.
+                </p1>
+              </tr>
+              <tr>
+                Honestly, if you want to learn this stuff, I feel you should look it up. There are many things online to help you out better than what I can tell ya!
+              </tr>
+            </table>
+            </div>
+          </th>
+          <th><div className="corner"></div></th>
+        </tr>
+      </table>
       <br/>
       <br/>
-      <button onClick={compile}>Begin Coding</button>
-      <button onClick={update}>update</button>
-      <button onClick={downloadTxtFile}>update</button>
-      {down}
+      <table>
+        <tr>
+          <th>
+            <button className="editButton" onClick={compile}>Begin Coding</button>
+          </th>
+          <th>
+            <button className="editButton" onClick={update}>Update (press before download)</button>
+          </th>
+          <th>
+            <button className="editButton" onClick={downloadTxtFile}>Download</button>
+          </th>
+        </tr>
+      </table>
       <table>
         <tr>
           <th>

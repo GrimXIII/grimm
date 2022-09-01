@@ -6,6 +6,18 @@
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
 }
+/*----------------------------------*/
+
+
+.editButton {
+  color:orange;
+  
+}
+
+
+
+
+/*----------------------------------*/
 
 body {
   background-image: url('https://cdn.glitch.global/ec718c4b-581f-4afc-848d-2eba19a4d0c0/Untitled%20drawing%20(6).png?v=1652935268578');
@@ -57,14 +69,6 @@ body {
   width: 16px;
   height: 16px;
 }
-
-
-
-
-
-
-/*----------------------------------*/
-
 
 .users{
 	float: right;

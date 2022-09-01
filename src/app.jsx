@@ -64,6 +64,17 @@ export default function Home() {
     }
   }
   
+    function achive() {
+      setAnim("popDown 1s forwards")
+      setAss("dudeStop")
+      setTitle("Whups!")
+      setText(
+        <>
+        Achivements are still being worked on...<br/>Hang tight while I get them out!
+        </>)
+    
+  }
+  
   function hide() {
     setAnim("popUp 1s forwards")
     setAss("dude")
@@ -254,6 +265,11 @@ function begin() {
           {/* Custo */}
           <div className="dropdown1">
             <img onClick={custo} style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/>
+          </div>
+                    
+          {/* Achivements */}
+          <div className="dropdown1">
+            <img onClick={achive} style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/medal.png?v=1662003057200"/>
           </div>
           
           {/* Info */}
