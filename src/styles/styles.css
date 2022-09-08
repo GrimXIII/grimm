@@ -10,8 +10,10 @@
 
 
 .editButton {
-  color:orange;
-  
+  color:black;
+  background-color:orange;
+  border:10px solid orange;
+  border-radius: 10px 10px 10px 10px;
 }
 
 

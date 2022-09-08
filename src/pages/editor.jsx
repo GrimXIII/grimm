@@ -119,12 +119,12 @@ export default function Home() {
             <iframe id="code" style={{height:"300px", width:"400px"}}></iframe>
           </th>
           <th>
-            <textarea id="html" placeholder="HTML" style={{height:"300px", width:"400px", resize:"none", backgroundColor:"160f19", border:"10px solid black"}}></textarea>
+            <textarea id="html" placeholder="HTML" style={{height:"300px", width:"400px", resize:"none", backgroundColor:"160f19", border:"10px solid black"}}>{"<button>I am a button</button>"}</textarea>
           </th>
         </tr>
         <tr>
           <th>
-            <textarea id="css" placeholder="CSS" style={{height:"300px", width:"400px", resize:"none", backgroundColor:"160f19", border:"10px solid black"}}></textarea>
+            <textarea id="css" placeholder="CSS" style={{height:"300px", width:"400px", resize:"none", backgroundColor:"160f19", border:"10px solid black"}}>{"button {\ncolor:orange;\nbackground-color:red;\n}\n\nbutton:active {\ncolor:lime;\nbackground-color:purple;\n}\n\nbutton:hover {\ncolor:purple;\nbackground-color:yellow\n}\n"}</textarea>
           </th>
           <th>
             <textarea id="js" placeholder="JavaScript" style={{height:"300px", width:"400px", resize:"none", backgroundColor:"160f19", border:"10px solid black"}}></textarea>

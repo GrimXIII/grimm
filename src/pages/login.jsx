@@ -24,8 +24,8 @@ export default function Home() {
   const [place, setPlace] = useState("")
 
   
-  
-  var usernames = ["Keegen", "Steven", "Cyrus", "Vaughn", "Damen", "Jennifer", "Bricen", "Larissa", "IGA"];
+  //add usernames to this place thing omg stfu
+  var usernames = ["Keegen", "Steven", "Cyrus", "Vaughn", "Damen", "Jennifer", "Bricen", "Larissa", "IGA", "TYRONE"];
 
   
 function login() {
