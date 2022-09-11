@@ -40,7 +40,7 @@ export default function Home() {
           <th>
             <div className="deep" style={{ backgroundColor:"orange", height:"250px", width:"250px", borderRadius:"20px" }}>
               <br/><h1 style={{ fontSize:"20px" }}>
-                bruh <br/>
+                Request Feature <br/>
               <img style={{ width:"200px"}} src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/delete.png?v=1655696813553" />
               </h1>
             </div>

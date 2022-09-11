@@ -124,7 +124,7 @@ function begin2() {
   else if (database[cookies.Name].level >= 10) {
     setCustoBut(
       <div className="dropdown1">
-        <Link><img href="/games" style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
+        <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
       </div>
     )
     
