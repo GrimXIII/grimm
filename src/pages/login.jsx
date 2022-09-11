@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { animated } from "react-spring";
 import { Link } from "wouter";
 //import "../styles/test.css";
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
+import { RemoveScrollBar } from 'react-remove-scroll-bar';
 import { useCookies } from "react-cookie";
 import account from "../../database.json";
 
@@ -24,8 +24,8 @@ export default function Home() {
   const [place, setPlace] = useState("")
 
   
-  
-  var usernames = ["Keegen", "Steven", "Cyrus", "Vaughn", "Damen", "Jennifer", "Bricen", "Larissa", "IGA"];
+  //add usernames to this place thing omg stfu
+  var usernames = ["Keegen", "Steven", "Cyrus", "Vaughn", "Damen", "Jennifer", "Bricen", "Larissa", "IGA", "TYRONE"];
 
   
 function login() {

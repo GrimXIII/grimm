@@ -21,6 +21,11 @@ export default function Home() {
   const [ass, setAss] = useState("dude")
   const [title, setTitle] = useState(" ")
   const [text, setText] = useState(" ")
+  const [custoBut, setCustoBut] = useState(
+  <div className="dropdown1">
+    <img onClick={custo} style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/>
+  </div>
+  )
 
 
 
@@ -64,15 +69,14 @@ export default function Home() {
     }
   }
   
-    function achive() {
-      setAnim("popDown 1s forwards")
-      setAss("dudeStop")
-      setTitle("Whups!")
-      setText(
-        <>
-        Achivements are still being worked on...<br/>Hang tight while I get them out!
-        </>)
-    
+  function achive() {
+    setAnim("popDown 1s forwards")
+    setAss("dudeStop")
+    setTitle("Whups!")
+    setText(
+      <>
+      Achivements are still being worked on...<br/>Hang tight while I get them out!
+      </>)
   }
   
   function hide() {
@@ -95,40 +99,47 @@ const [admin, setAdmin] = useState(
         </Link>
       </>
 )
+
+const [code, setCode] = useState(
+      <>
+        <Link href="/edit">
+          <img className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/code.png?v=1662087646732" style={{ width:"48px" }}/>
+        </Link>
+      </>
+)
   
 
 
 function begin2() {
   if (!cookies.Name) {
     setAdmin()
+    setCode()
   }
   else if (database[cookies.Name].status === "Regular") {
     setAdmin()
   }
-
+  else if (database[cookies.Name].domain === "false") {
+    setCode(<></>)
+  }
+  else if (database[cookies.Name].level >= 10) {
+    setCustoBut(
+      <div className="dropdown1">
+        <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
+      </div>
+    )
+    
+  }
 }
   
   
   
-function begin() {
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+function begin() {    
   if (cookies.Name) {
       setStuff(
       <>
         <br />
         <br />
-        <div style={{ width:"500px" }}>          
+        <div style={{ width:"600px" }}>          
           {/* Profile */}
           <div className="dropdown1">
               <img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/account.png?v=1655317139708"/>
@@ -263,10 +274,8 @@ function begin() {
           </div>
           
           {/* Custo */}
-          <div className="dropdown1">
-            <img onClick={custo} style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/>
-          </div>
-                    
+          {custoBut}
+          
           {/* Achivements */}
           <div className="dropdown1">
             <img onClick={achive} style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/medal.png?v=1662003057200"/>
@@ -278,6 +287,8 @@ function begin() {
           </div>
           
           {admin}
+          
+          {code}
           
           {/* Logout */}
           <div className="dropdown1">

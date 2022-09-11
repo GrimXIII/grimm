@@ -36,7 +36,7 @@ const [hello, setHello] = React.useState(randomLanguage());
       
       <br/><br/><br/><br/><br/><br/><br/><br/>
       <div>    
-        <table style={{ width:"1400px" }}>
+        {/*<table style={{ width:"1400px" }}>
           
           <tr>
             <th style={{ width:"50%"}}>
@@ -110,7 +110,7 @@ const [hello, setHello] = React.useState(randomLanguage());
               </p1>
             </th>
           </tr>   
-        </table>
+        </table>*/}
         <br/><br/><br/><br/><br/>
           <h1 style={{ textAlign:"center" }}>Wanna join the fun? Create an account!</h1>
           <p1 style={{ textAlign:"center", color:cookies.colorT }}>Email me at khendrickson@sb.k12.wi.us with a Username and Password, and you will be notified when your account has been created!</p1>
