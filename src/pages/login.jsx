@@ -90,7 +90,7 @@ function passwordForgor() {
       <table>
         <tr>
           <th>
-      <div className="loginBox" style={{ animation:anim6 }}>
+        <div className="loginBox" style={{ animation:anim6 }}>
         <div style={{ animation:anim3, textAlign:"center"}}><hed>Login</hed></div>    
         <div style={{ width:"200px", height:"50px" }}></div>
         <div style={{ animation:anim4, height:"40px"}}>

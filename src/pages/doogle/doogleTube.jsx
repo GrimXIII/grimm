@@ -15,7 +15,7 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <div style={{ backgroundColor:"orange", height:"200px", width:"1100px", padding:"10px" }}>
+      <div style={{ backgroundColor:"#ff6700", height:"200px", width:"1100px", padding:"10px" }}>
         <img style={{ width:"50px", borderRadius:"5px" }} src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/channels4_profile%20(1).jpg?v=1655783184862" />
         &nbsp;Grimm XIII
         <div className="line"></div>
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </div>
       
-      <div style={{ backgroundColor:"orange", height:"200px", width:"1100px", padding:"10px" }}>
+      <div style={{ backgroundColor:"#ff6700", height:"200px", width:"1100px", padding:"10px" }}>
         <img style={{ width:"50px", borderRadius:"5px" }} src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/channels4_profile.jpg?v=1655783184861" />
         &nbsp;Vaughan XV
         <div className="line"></div>
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </div>
       
-      <div style={{ backgroundColor:"orange", height:"200px", width:"1100px", padding:"10px" }}>
+      <div style={{ backgroundColor:"#ff6700", height:"200px", width:"1100px", padding:"10px" }}>
         <img style={{ width:"50px", borderRadius:"5px" }} src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/channels4_profile.jpg?v=1656481051840" />
         &nbsp;Coal XIV
         <div className="line"></div>

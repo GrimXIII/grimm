@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     begin()
     begin2()
-  }, /*[]*/);
+  }, []);
   
   const [anim, setAnim] = useState("popUp .0000000001s forwards")
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -551,7 +551,7 @@ const [stuff2, setStuff2] = useState()
           <p1 className="diss" style={{ transform:"translateY(0px)" }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hover up here to show Menu</p1>
         </div>
         <br/>
-      <div className="pops" style={{ backgroundColor:"orange", animation:anim, border:"10px solid black" }}>
+      <div className="pops" style={{ backgroundColor:"#ff6700", animation:anim, border:"10px solid black" }}>
           <img onClick={hide} style={{ width:"50px", transform:"translateY(-125px) translateX(875px)"}} src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/cross.png?v=1655441920112"/>
           <div>
             <h1 style={{ color:"black", fontSize:"50px", transform:"translateY(-125px) translateX(10px)"}}>{title}</h1>

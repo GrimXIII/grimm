@@ -18,6 +18,7 @@ import leader from "../pages/leader"
 import info from "../pages/info"
 import edit from "../pages/editor"
 import custo from "../pages/custo"
+import signup from "../pages/signup"
 
 import error from "../pages/404"
 
@@ -43,6 +44,7 @@ export default () => (
       <Route path="/info" component={info} />
       <Route path="/edit" component={edit} />
       <Route path="/custo" component={custo} />
+      <Route path="/signup" component={signup} />
     
       <Route path="/:rest*" component={error} />
    </Switch>

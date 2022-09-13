@@ -21,7 +21,7 @@ export default function Home() {
   function check() {
     if (database[cookies.Name].domain == "true") {
     setNice(      
-      <div style={{ backgroundColor:"orange", borderRadius:"10px", padding:"10px", width:"800px" }}>
+      <div style={{ backgroundColor:"#ff6700", borderRadius:"10px", padding:"10px", width:"800px" }}>
         <h1 style={{color:"black", fontSize:"40px"}}>Nice! You got one!</h1>
         <p1 style={{color:"black"}}>
           It appears that you own a Domain, if you want to work on coding it, the editor is right <Link href="/edit">Here!</Link>
@@ -36,7 +36,7 @@ export default function Home() {
       <br />
       <br />
 
-      <div style={{ backgroundColor:"orange", borderRadius:"10px", padding:"10px" }}>
+      <div style={{ backgroundColor:"#ff6700", borderRadius:"10px", padding:"10px" }}>
         <h1 style={{ color:"black", fontSize:"50px" }}>
           Doogle Domains
         </h1>
@@ -162,7 +162,7 @@ export default function Home() {
         <p1>
           Want to own one of these? Email me the domain name and your username&nbsp;
         </p1>
-        <button onClick={mail} style={{ background:"orange", borderRadius:"3px" }}>
+        <button onClick={mail} style={{ background:"#ff6700", borderRadius:"3px" }}>
           Email Me!
         </button>
       </div>
