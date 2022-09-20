@@ -13,7 +13,22 @@ export default function Home() {
   
   return (
     <>
-      
+      <table>
+        <tr>
+          <th>
+
+          
+          </th>
+          <th>
+            <div className="blogTop">adf</div>
+            <div className="blogBot">adf</div>
+            
+            <div className="blogTop">adf</div>
+            <div className="blogBot">adf</div>
+          
+          </th>
+        </tr>
+      </table>
     </>
   );
 }

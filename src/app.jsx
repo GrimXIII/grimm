@@ -14,7 +14,8 @@ export default function Home() {
   useEffect(() => {
     begin()
     begin2()
-  }, []);
+    cookie()
+  }, /*[]*/);
   
   const [anim, setAnim] = useState("popUp .0000000001s forwards")
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -27,7 +28,9 @@ export default function Home() {
   </div>
   )
 
-
+  const [cookieClick, setCookieClick] = useState(
+    
+  )
 
   function profile() {
     setAnim("popDown 1s forwards")
@@ -115,22 +118,44 @@ function begin2() {
     setAdmin()
     setCode()
   }
-  else if (database[cookies.Name].status === "Regular") {
-    setAdmin()
-  }
-  else if (database[cookies.Name].domain === "false") {
-    setCode(<></>)
-  }
-  else if (database[cookies.Name].level >= 10) {
-    setCustoBut(
-      <div className="dropdown1">
-        <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
-      </div>
-    )
-    
+  if (cookies.Name) {
+    if (database[cookies.Name].status === "Regular") {
+      setAdmin()
+    }
+    if (database[cookies.Name].domain === "false") {
+      setCode(<></>)
+    }
+    if (database[cookies.Name].level >= 10) {
+      setCustoBut(
+        <div className="dropdown1">
+          <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
+        </div>
+      )
+    }
   }
 }
   
+const [cookieco, setCookieco] = useState()
+
+function cookieDie() {
+  removeCookie('CookieClicker')
+  window.location.replace('/')
+}
+
+
+function cookie() {
+  if (cookies.CookieClicker) {
+    setCookieco(
+      <div className="dropdown1">
+        <img style={{ width:"48px" }} className="rotate1" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/menu.png?v=1663337785836"/>
+        <div style={{ width: "500px", height: "500px", padding: "10px" }} className="dropdown1-content dropdown-contentLeft">
+          <iframe style={{ width:"450px", height:"400px" }} src="https://leeward-frequent-arithmetic.glitch.me/"/>
+          <button onClick={cookieDie} style={{ color:'black', backgroundColor:'#ff6700', border:'10px solid black', padding:'10px', borderRadius:"5px" }}>Stop Cookie Clicker</button>
+        </div>
+      </div>
+    )
+  }
+}
   
   
 function begin() {    
@@ -289,6 +314,8 @@ function begin() {
           {admin}
           
           {code}
+          
+          {cookieco}
           
           {/* Logout */}
           <div className="dropdown1">
