@@ -6,16 +6,86 @@ import PageRouter from "./components/router.jsx";
 import Seo from './components/seo.jsx';
 import ReactDOM from 'react-dom';
 import database from "../database.json"
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { collection, doc, setDoc, getDoc } from "firebase/firestore"; 
 
   class Clock extends React.Component {constructor(props) {super(props);this.state = {time: new Date()}}componentDidMount() {setInterval(this.update, 1000)}render() {const h = this.state.time.getHours();const m = this.state.time.getMinutes();const s = this.state.time.getSeconds();return (<p1>{h % 12}:{(m < 10 ? '0' + m : m)}:{(s < 10 ? '0' + s : s)} {h < 12 ? 'AM' : 'PM'}</p1>);ReactDOM.render(<Clock />, document.getElementById('mount'))}}
 
+const firebaseConfig = {
+    apiKey: "AIzaSyCC_OX02mExz5aNaj4roF83f0sa5gUCA2c",
+    authDomain: "grimmxiii-42de4.firebaseapp.com",
+    projectId: "grimmxiii-42de4",
+    storageBucket: "grimmxiii-42de4.appspot.com",
+    messagingSenderId: "464467948445",
+    appId: "1:464467948445:web:aceb7ffe11e52ca38cf574",
+    measurementId: "G-DSMBMQG2JX",
+    databaseURL: "https://grimmxiii-42de4-default-rtdb.firebaseio.com"
+  };
+  const app = initializeApp(firebaseConfig);
+  export const db = getFirestore(app);
+  
+
+/*
+function begin2() {
+  if (!cookies.Name) {
+    setAdmin()
+    setCode()
+  }
+  if (cookies.Name) {
+    if (database[cookies.Name].status === "Regular") {
+      setAdmin()
+    }
+    if (database[cookies.Name].domain === "false") {
+      setCode(<></>)
+    }
+    if (database[cookies.Name].level >= 10) {
+      setCustoBut(
+        <div className="dropdown1">
+          <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
+        </div>
+      )
+    }
+  }
+}
+*/
+
+function admin() {
+  
+}
+
 
 export default function Home() {
+      
+  const [a, setA] = useState(3) 
+  function a2() {if (a > 1) {setA(a-1)}}
+    window.onbeforeunload = function() {
+  return "Data will be lost if you leave the page, are you sure?";
+  };
   useEffect(() => {
     begin()
-    begin2()
+    //begin2(Let's just leave this here without context) sounds good!
+    //begin34(Ill get back to workin on it. And there will be unlimited control)
+    //begin35(hahahahahahahahahahaHAHAHAHAHAHAHAHHAAHAH)
+    //begin36(also project stopped, lol)
     cookie()
-  }, /*[]*/);
+    a2()
+  }, [a]);
+  
+  const [ad, setAd] = useState(<></>)
+  
+  
+  function adminB() {
+    if (cookies.status === "admin") {
+      setAd(
+        <>
+          <Link href="/admin">
+            <img className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/admin.png?v=1656484386951" style={{ width:"48px" }}/>
+          </Link>
+        </>
+      )
+    }
+  }
   
   const [anim, setAnim] = useState("popUp .0000000001s forwards")
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -113,27 +183,7 @@ const [code, setCode] = useState(
   
 
 
-function begin2() {
-  if (!cookies.Name) {
-    setAdmin()
-    setCode()
-  }
-  if (cookies.Name) {
-    if (database[cookies.Name].status === "Regular") {
-      setAdmin()
-    }
-    if (database[cookies.Name].domain === "false") {
-      setCode(<></>)
-    }
-    if (database[cookies.Name].level >= 10) {
-      setCustoBut(
-        <div className="dropdown1">
-          <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
-        </div>
-      )
-    }
-  }
-}
+
   
 const [cookieco, setCookieco] = useState()
 
@@ -311,11 +361,20 @@ function begin() {
             <Link href="/info"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/i.png?v=1655833777099"/></Link>
           </div>
           
-          {admin}
+          {ad}
           
           {code}
           
           {cookieco}
+          
+          <Link href='/games'>
+            <img className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/code.png?v=1664806679037" style={{ width:"48px" }}/>
+          </Link>
+          
+          
+          <Link href="/server">
+            <img className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/Untitled.png?v=1664385485970" style={{ width:"48px" }}/>
+          </Link>
           
           {/* Logout */}
           <div className="dropdown1">

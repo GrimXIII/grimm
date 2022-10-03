@@ -7,8 +7,8 @@ import { useCookies } from "react-cookie";
 import account from "../../database.json";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { collection, doc, setDoc, getDoc } from "firebase/firestore"; 
-
+import { collection, doc, setDoc, getDoc, getDocs } from "firebase/firestore"; 
+import { db } from '../app.jsx'
 
 
 /*
@@ -17,42 +17,26 @@ https://console.firebase.google.com/u/0/project/grimmxiii-42de4/firestore/data/~
 */
 
 export default function Home() {  
-  const firebaseConfig = {
-    apiKey: "AIzaSyCC_OX02mExz5aNaj4roF83f0sa5gUCA2c",
-    authDomain: "grimmxiii-42de4.firebaseapp.com",
-    projectId: "grimmxiii-42de4",
-    storageBucket: "grimmxiii-42de4.appspot.com",
-    messagingSenderId: "464467948445",
-    appId: "1:464467948445:web:aceb7ffe11e52ca38cf574",
-    measurementId: "G-DSMBMQG2JX"
-  };
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
   
-  
-  const [bruh, setBruh] = useState("test text")
-  
-  async function getData() {
-    getDoc(doc(db, "cities", "DC")).then(docSnap => {
-      if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
-        var data = docSnap.data();
-        var state = data.state;
-        var capital = data.capital;
-        setBruh(state + " - " + capital)
-      } else {
-        console.log("No such document!");
-        setBruh("This does not exist")
-      }
-    })
+  function test() {
+    const querySnapshot = getDocs(collection(db, "cities"));
+      querySnapshot.forEach((doc) => {
+      console.log(doc.id, " => ", doc.data());
+    });
   }
+  
+  
+  
+    async function create() {
+    await setDoc(doc(db, "state", 'state'), {
+      state: 'online',
+    });
+  }
+  
   
   return (
     <>
-      Sample Text
-      <button onClick={getData}>Get Data</button>
-      {bruh}
+      <button onClick={create}>Get Data</button>
     </>
   );
 }

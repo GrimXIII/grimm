@@ -53,7 +53,7 @@ function Paul() {
 function Sans() {
   window.location.replace('https://github.com/mario1D240')
 }
-  //https://github.com/hyzq
+//https://github.com/hyzq
 function hyz() {
   window.location.reaplce('https://github.com/hyzq')
 }
@@ -64,7 +64,7 @@ function hyz() {
   return (
     <>
       <h1>Alright, now the good stuff!</h1>
-      <p1>Grimm.com was created by GrimmXIII (Keegen H) main email: <Link href="" onClick={redirect} style={{color:"orange"}}>diepiomaster3@gmail.com</Link></p1>
+      <p1>Grimm.pw was created by GrimmXIII (Keegen H) main email: <Link href="" onClick={redirect} style={{color:"orange"}}>diepiomaster3@gmail.com</Link></p1>
       <p1>Some aspects have been modified by JKD464 and Vaughan XV</p1>
       
       <br/><br/><br/><br/><br/>

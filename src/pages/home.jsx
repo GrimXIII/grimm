@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
+import { Link } from 'wouter';
 
 
 export default function About() {
@@ -31,10 +32,22 @@ const [hello, setHello] = React.useState(randomLanguage());
       <h1 className="textCenter" style={{ color: cookies.ColorH }}>{hello}</h1>
       <h1 className="textCenter" style={{ color: cookies.ColorH, fontSize:"20px"}}>Grimm's Lair</h1>
       <h1 className="textCenter" style={{ color: cookies.ColorT, fontSize:"20px"}}>The website thats there just because it can be.</h1>
+    
 
       
       
       <br/><br/><br/><br/><br/><br/><br/><br/>
+      <h1 style={{color:'red'}}>Hey You! Yeah, You!</h1><br/>
+      <p1>
+        This website is still a massive work in progess, 
+        <p1 style={{color:'red'}}>
+          EXPECT SOME THINGS TO BE BROKEN OR NOT ORGANIZED!
+        </p1>
+        Just know that as of typing this message (Sep 27 2022) I am still workin on this.<br/>
+        If you find any issues on here, let me know at <Link style={{ color:'#ff6700' }} href="mailto:diepiomaster3@gmail.com">diepiomaster3@gmail.com</Link>
+      </p1>
+      
+      
       <div>    
         {/*<table style={{ width:"1400px" }}>
           
