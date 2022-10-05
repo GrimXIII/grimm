@@ -365,9 +365,12 @@ function begin() {
           
           {code}
           
-          {cookieco}
+          {cookieco}  
           
-          <Link href='/games'>
+          <div className="dropdown1">
+            asdf
+          </div>
+          <Link href='/games2'>
             <img className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/code.png?v=1664806679037" style={{ width:"48px" }}/>
           </Link>
           

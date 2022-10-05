@@ -22,6 +22,7 @@ import signup from "../pages/signup"
 import profile from "../pages/profile"
 import server from "../pages/server"
 import games2 from "../pages/games2"
+import help from "../pages/help"
 
 import error from "../pages/404"
 
@@ -51,6 +52,7 @@ export default () => (
       <Route path="/profile" component={profile} />
       <Route path="/server" component={server} />
       <Route path="/games2" component={games2} />
+      <Route path="/help" component={help} />
     
       <Route path="/:rest*" component={error} />
    </Switch>
