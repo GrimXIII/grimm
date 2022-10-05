@@ -6,15 +6,86 @@ import PageRouter from "./components/router.jsx";
 import Seo from './components/seo.jsx';
 import ReactDOM from 'react-dom';
 import database from "../database.json"
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { collection, doc, setDoc, getDoc } from "firebase/firestore"; 
 
   class Clock extends React.Component {constructor(props) {super(props);this.state = {time: new Date()}}componentDidMount() {setInterval(this.update, 1000)}render() {const h = this.state.time.getHours();const m = this.state.time.getMinutes();const s = this.state.time.getSeconds();return (<p1>{h % 12}:{(m < 10 ? '0' + m : m)}:{(s < 10 ? '0' + s : s)} {h < 12 ? 'AM' : 'PM'}</p1>);ReactDOM.render(<Clock />, document.getElementById('mount'))}}
 
+const firebaseConfig = {
+    apiKey: "AIzaSyCC_OX02mExz5aNaj4roF83f0sa5gUCA2c",
+    authDomain: "grimmxiii-42de4.firebaseapp.com",
+    projectId: "grimmxiii-42de4",
+    storageBucket: "grimmxiii-42de4.appspot.com",
+    messagingSenderId: "464467948445",
+    appId: "1:464467948445:web:aceb7ffe11e52ca38cf574",
+    measurementId: "G-DSMBMQG2JX",
+    databaseURL: "https://grimmxiii-42de4-default-rtdb.firebaseio.com"
+  };
+  const app = initializeApp(firebaseConfig);
+  export const db = getFirestore(app);
+  
+
+/*
+function begin2() {
+  if (!cookies.Name) {
+    setAdmin()
+    setCode()
+  }
+  if (cookies.Name) {
+    if (database[cookies.Name].status === "Regular") {
+      setAdmin()
+    }
+    if (database[cookies.Name].domain === "false") {
+      setCode(<></>)
+    }
+    if (database[cookies.Name].level >= 10) {
+      setCustoBut(
+        <div className="dropdown1">
+          <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
+        </div>
+      )
+    }
+  }
+}
+*/
+
+function admin() {
+  
+}
+
 
 export default function Home() {
+      
+  const [a, setA] = useState(3) 
+  function a2() {if (a > 1) {setA(a-1)}}
+    window.onbeforeunload = function() {
+  return "Data will be lost if you leave the page, are you sure?";
+  };
   useEffect(() => {
     begin()
-    begin2()
-  }, /*[]*/);
+    //begin2(Let's just leave this here without context) sounds good!
+    //begin34(Ill get back to workin on it. And there will be unlimited control)
+    //begin35(hahahahahahahahahahaHAHAHAHAHAHAHAHHAAHAH)
+    //begin36(also project stopped, lol)
+    cookie()
+    a2()
+  }, [a]);
+  
+  const [ad, setAd] = useState(<></>)
+  
+  
+  function adminB() {
+    if (cookies.status === "admin") {
+      setAd(
+        <>
+          <Link href="/admin">
+            <img className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/admin.png?v=1656484386951" style={{ width:"48px" }}/>
+          </Link>
+        </>
+      )
+    }
+  }
   
   const [anim, setAnim] = useState("popUp .0000000001s forwards")
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -27,7 +98,9 @@ export default function Home() {
   </div>
   )
 
-
+  const [cookieClick, setCookieClick] = useState(
+    
+  )
 
   function profile() {
     setAnim("popDown 1s forwards")
@@ -110,27 +183,29 @@ const [code, setCode] = useState(
   
 
 
-function begin2() {
-  if (!cookies.Name) {
-    setAdmin()
-    setCode()
-  }
-  else if (database[cookies.Name].status === "Regular") {
-    setAdmin()
-  }
-  else if (database[cookies.Name].domain === "false") {
-    setCode(<></>)
-  }
-  else if (database[cookies.Name].level >= 10) {
-    setCustoBut(
+
+  
+const [cookieco, setCookieco] = useState()
+
+function cookieDie() {
+  removeCookie('CookieClicker')
+  window.location.replace('/')
+}
+
+
+function cookie() {
+  if (cookies.CookieClicker) {
+    setCookieco(
       <div className="dropdown1">
-        <Link href="/games"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/custo.png?v=1655324568790"/></Link>
+        <img style={{ width:"48px" }} className="rotate1" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/menu.png?v=1663337785836"/>
+        <div style={{ width: "500px", height: "500px", padding: "10px" }} className="dropdown1-content dropdown-contentLeft">
+          <iframe style={{ width:"450px", height:"400px" }} src="https://leeward-frequent-arithmetic.glitch.me/"/>
+          <button onClick={cookieDie} style={{ color:'black', backgroundColor:'#ff6700', border:'10px solid black', padding:'10px', borderRadius:"5px" }}>Stop Cookie Clicker</button>
+        </div>
       </div>
     )
-    
   }
 }
-  
   
   
 function begin() {    
@@ -286,9 +361,23 @@ function begin() {
             <Link href="/info"><img style={{ width:"48px" }} className="imgHov" src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/i.png?v=1655833777099"/></Link>
           </div>
           
-          {admin}
+          {ad}
           
           {code}
+          
+          {cookieco}  
+          
+          <div className="dropdown1">
+            asdf
+          </div>
+          <Link href='/games2'>
+            <img className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/code.png?v=1664806679037" style={{ width:"48px" }}/>
+          </Link>
+          
+          
+          <Link href="/server">
+            <img className="imgHov" src="https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/Untitled.png?v=1664385485970" style={{ width:"48px" }}/>
+          </Link>
           
           {/* Logout */}
           <div className="dropdown1">
@@ -551,7 +640,7 @@ const [stuff2, setStuff2] = useState()
           <p1 className="diss" style={{ transform:"translateY(0px)" }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hover up here to show Menu</p1>
         </div>
         <br/>
-      <div className="pops" style={{ backgroundColor:"orange", animation:anim, border:"10px solid black" }}>
+      <div className="pops" style={{ backgroundColor:"#ff6700", animation:anim, border:"10px solid black" }}>
           <img onClick={hide} style={{ width:"50px", transform:"translateY(-125px) translateX(875px)"}} src="https://cdn.glitch.global/5608dbda-63e0-48b7-aeef-17abab77528d/cross.png?v=1655441920112"/>
           <div>
             <h1 style={{ color:"black", fontSize:"50px", transform:"translateY(-125px) translateX(10px)"}}>{title}</h1>

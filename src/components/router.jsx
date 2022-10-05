@@ -18,6 +18,11 @@ import leader from "../pages/leader"
 import info from "../pages/info"
 import edit from "../pages/editor"
 import custo from "../pages/custo"
+import signup from "../pages/signup"
+import profile from "../pages/profile"
+import server from "../pages/server"
+import games2 from "../pages/games2"
+import help from "../pages/help"
 
 import error from "../pages/404"
 
@@ -43,6 +48,11 @@ export default () => (
       <Route path="/info" component={info} />
       <Route path="/edit" component={edit} />
       <Route path="/custo" component={custo} />
+      <Route path="/signup" component={signup} />
+      <Route path="/profile" component={profile} />
+      <Route path="/server" component={server} />
+      <Route path="/games2" component={games2} />
+      <Route path="/help" component={help} />
     
       <Route path="/:rest*" component={error} />
    </Switch>

@@ -2,9 +2,13 @@ import React, {useState, useEffect} from "react";
 import { animated } from "react-spring";
 import { Link } from "wouter";
 import {RemoveScrollBar} from 'react-remove-scroll-bar';
+import { useCookies } from "react-cookie";
+
 
 
 export default function Home() {
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  
   
   const [game, setGame] = useState()
   
@@ -13,7 +17,7 @@ export default function Home() {
   }
   
   function Tetris() {
-    setGame("https://abalone-scratched-screwdrivers.glitch.me/")
+    setGame("https://among-sussy-baka.glitch.me/")
   }
   
   function Tfe() {
@@ -38,6 +42,20 @@ export default function Home() {
   
   function Cookie() {
     setGame("https://leeward-frequent-arithmetic.glitch.me/")
+  }
+  
+  function Cookie2() {
+    setGame("https://local-boiling-organ.glitch.me/")
+  }
+  
+  function Checkers() {
+    setGame("https://puffy-nonstop-ragdoll.glitch.me/")
+  }
+  
+  
+  function background() {
+    setCookie("CookieClicker", 'CookieClicker', { path:"/" })
+    window.location.replace('/')
   }
   
   return (
@@ -71,8 +89,15 @@ export default function Home() {
               <tr>
                 <th><button onClick={badTime}> <img width="100px" src="https://cdn.glitch.global/020e4c35-e18f-4e25-b020-427fd438bc72/ezgif-2-d856915ea3.gif?v=1661272947490"/><br/>Bad Time Sim</button></th>
                 <th><button onClick={Cookie}> <img width="100px" src="https://cdn.glitch.me/020e4c35-e18f-4e25-b020-427fd438bc72/ezgif-2-f64dc54913.gif?v=1661359036141"/><br/>Cookie Clicker</button></th>
+                <th><button onClick={Checkers}>Checkers</button></th>
+              </tr>
+              <tr>
+                <th><button onClick={Cookie2}>New Cookie Clicker!</button></th>
               </tr>
             </table>
+            <button onClick={background} style={{border:"10px solid black", padding:'10px', color:'black', backgroundColor:'#ff6700', borderRadius:"10px"}}>
+              Run Cookie Clicker in the Background
+            </button>
             </div>
           </th>
           <th><div className="corner"></div></th>

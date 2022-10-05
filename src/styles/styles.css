@@ -8,15 +8,27 @@
 }
 /*----------------------------------*/
 
-
-.editButton {
-  color:black;
-  background-color:orange;
-  border:10px solid orange;
-  border-radius: 10px 10px 10px 10px;
+.helpDiv {
+  background-color:black;
+  border:2px solid #ff6700;
+  border-radius:25px;
+  padding:10px;
+  width:800px;
 }
 
+.helpTit {
+  font-size:25px;
+  color:#ff6700;
+}
 
+.helpTxt {
+  color:#ff6700;
+  
+}
+
+.helpImg {
+  width:50px;
+}
 
 
 /*----------------------------------*/
@@ -29,6 +41,17 @@ body {
   font-family: "HK Grotesk";
 }
 
+.accountBox {
+  background-color:#ff6700;
+  border-radius:10px;
+  padding:10px
+}
+
+.accountBox:hover {
+  background-color:lime;
+}
+
+
 .editor {
   background-color: #011e52;
   border-radius: 10px 10px 10px 10px;
@@ -38,7 +61,7 @@ body {
 
 .blogTop {
   height: 75px;
-  width: 500px;
+  width: 450px;
   border-radius: 50px 50px 0px 0px;
 	border : 5px solid black;
   background-color: #ff6700;
@@ -46,7 +69,7 @@ body {
 
 .blogBot {
   height: 100px;
-  width: 500px;
+  width: 450px;
   border-radius: 0px 0px 50px 50px;
 	border : 5px solid black;
   background-color: #ff6700;
@@ -57,7 +80,7 @@ body {
   font-size: 50px;
   float: right 10px;
   color: blue;
-  width: 500px;
+  width: 450px;
   text-align: center;
 }
 
@@ -93,7 +116,7 @@ body {
 
 .topShit {
   background-color:#222100;
-  color: orange;
+  color: #ff6700;
   padding: 50px
 }
 
@@ -152,6 +175,11 @@ body {
   font-family: HK Grotesk;
   font-weight: bold;
   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+@font-face {
+  font-family: KH Men;
+  src: url("https://cdn.glitch.global/eac1cd41-b4dd-4d36-92fc-23d0ffb87309/KH2_ALL_MENU_I.TTF?v=1663604675500")
     format("opentype");
 }
 
@@ -298,14 +326,14 @@ h2 {
   position: absolute;
   background-color: #222100;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px #FF9800;
+  box-shadow: 0px 8px 16px 0px #ff6700;
   z-index: 10;
   border-radius:10px;
   border:1px solid #ff6700;
 }
 
 .dropdown1-content a {
-  color: #FF9800;
+  color: #ff6700;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -387,7 +415,7 @@ h2 {
 .items {
   position:fixed;
   left:0;
-  top:125px;
+  top:50px;
   background-color: transparent;
   border-collapse:collapse;
   animation: hideItems .6s forwards
@@ -408,15 +436,15 @@ h2 {
 }
 
 .main {
-  background-color: orange;
-  height: 500px;
+  background-color: #ff6700;
+  height: 700px;
   width: 350px;
   border-radius: 00px 00px 10px 0px;
   bottom: 109px;
 }
 
 .spot1 {
-  background-color: orange;
+  background-color: #ff6700;
   width: 350px;
   height: 55px;
   float: left;
@@ -424,7 +452,7 @@ h2 {
 }
 
 .spot2 {
-  background-color: orange;
+  background-color: #ff6700;
   width: 100px;
   height: 55px;
   float: left;
@@ -433,11 +461,11 @@ h2 {
 
 .corner {
   position: relative;
-  top: -75px;
+  top: -175px;
   height: 350px;
   width: 25px;
   border-top-left-radius: 100px;
-  box-shadow: 0 -25px 0 0 orange;
+  box-shadow: 0 -25px 0 0 #ff6700;
   /* thanks to Jeroen Knol for the corner style */
 }
 
@@ -556,7 +584,7 @@ hed {
 
 @keyframes rainbow {
   0% {color:red}
-  16% {color:orange}
+  16% {color:#ff6700}
   33% {color:yellow}
   40% {color:green}
   66% {color:lime}
@@ -595,7 +623,7 @@ hed {
   overflow-y:auto;
   width:100px;
   height:100px;
-  background-color:orange;
+  background-color:#ff6700;
 }
 
 @keyframes thumbUp {
@@ -634,7 +662,7 @@ hed {
 
 .news {
   background-color:#222100;
-  color:orange;
+  color:#ff6700;
   padding:10px;
   border-radius:10px;
   width:700px;
@@ -642,7 +670,7 @@ hed {
 }
 
 .news:hover {
-  background-color:orange;
+  background-color:#ff6700;
   color:#222100;
 }
 
@@ -651,14 +679,14 @@ hed {
 }
 
 .newsTitle {
-  color:orange;
+  color:#ff6700;
   font-size:35px;
   text-align:left;
   transform:translateY(-30px) translateX(10px)
 }
 
 .newsText {
-  color:orange;
+  color:#ff6700;
   text-align:left;
 }
 
@@ -671,16 +699,16 @@ hed {
 }
 
 .artTitle {
-  color:orange;
+  color:#ff6700;
   font-size:100px;
 }
 
 .artText {
-  color:orange;
+  color:#ff6700;
   font-size:25px;
 }
 
 .artTitle::selection {
   background: lime;
-  color:orange;
+  color:#ff6700;
 }

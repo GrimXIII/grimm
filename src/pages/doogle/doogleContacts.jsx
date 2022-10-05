@@ -11,7 +11,7 @@ export default function About() {
 
   return (
     <div>
-    <table style={{ width:"1000px", height:"100px", border:"10px solid #FF9800" }}>
+    <table style={{ width:"1000px", height:"100px", border:"10px solid #ff6700" }}>
       
       <tr>
       <th style={{ fontSize:"30px"}}>Name</th>

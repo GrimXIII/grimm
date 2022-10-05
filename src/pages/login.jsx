@@ -5,9 +5,15 @@ import { Link } from "wouter";
 import { RemoveScrollBar } from 'react-remove-scroll-bar';
 import { useCookies } from "react-cookie";
 import account from "../../database.json";
+import { initializeApp } from "firebase/app";
+import { collection, doc, setDoc, getDoc, getFirestore } from "firebase/firestore"; 
+import { getDatabase, ref, child, get, onValue } from "firebase/database";
+import { db } from "../app.jsx";
+
 
 
 export default function Home() {
+
   
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [name, setName] = useState(" ")
@@ -22,35 +28,81 @@ export default function Home() {
   const [anim8, setAnim8] = useState("")
   const [wrong, setWrong] = useState("")
   const [place, setPlace] = useState("")
+  const [error, setError] = useState("")
 
+  
+  useEffect(() => {
+  }, [name, pass] );
   
   //add usernames to this place thing omg stfu
   var usernames = ["Keegen", "Steven", "Cyrus", "Vaughn", "Damen", "Jennifer", "Bricen", "Larissa", "IGA", "TYRONE"];
 
   
-function login() {
-  //Help from StackOverFlow - https://stackoverflow.com/a/15818116/15437058
-  for(var i = 0; i < usernames.length; i++) {
-    if(usernames[i] == name) { 
-      setPlace(name)
+async function login() {
+  getDoc(doc(db, "users", `${name}`)).then(docSnap => {
+    if (docSnap.exists()) {
       animationsCool()
+      setPlace(name)
+    } else {
+      setError("Username not found")
     }
-    else if (!usernames[i] == name) {
-      setAnim5("wrong 1s forwards")
-    }
-  }
+  })
 }
+  
+  
+  const [sp, setSP] = useState(false)
+  const [tex, setTex] = useState('password')
+  const [p, setP] = useState(false)
 
-function password() {
-  if (pass === account[name].password) {
+  
+  function showpass() {
+    if (sp === false) {
+      setTex('text')
+      setSP(true)
+      setP(true)
+    } else if (sp === true) {
+      if (p === false) {
+      setTex('password')
+      setSP(false)        
+      }
+    }
+    setP(false)
+  }
+  
+  
+
+  
+  function animations2() {
     setCookie("Name", name, { path:"/" });
     setCookie("Pass", password, { path: "/" });
+    setCookie("status", s, { path:"/" });
     setAnim("fadeOut 1s forwards")
     setAnim2("nameText 1s forwards")
     setAnim6("right 3s forwards")
     setAnim7("left 3s forwards")
     setAnim8("ready 4s forwards")
   }
+  
+  
+const dbRef = ref(getDatabase());
+const docRef = doc(db, "users", "grimm");
+const docSnap = getDoc(docRef);
+const [s, setS] = useState("")  
+  
+  
+function password() {    
+    getDoc(doc(db, "users", `${name}`)).then(docSnap => {
+      if (docSnap.exists()) {
+        var passs = docSnap.data().pass
+        var stat = docSnap.data().status
+        setS(`${stat}`)
+        if (pass === passs) {
+          animations2()
+        }
+      } else {
+        console.log("No such document!");
+      }
+    });
 }
   
   
@@ -90,11 +142,12 @@ function passwordForgor() {
       <table>
         <tr>
           <th>
-      <div className="loginBox" style={{ animation:anim6 }}>
+        <div className="loginBox" style={{ animation:anim6 }}>
         <div style={{ animation:anim3, textAlign:"center"}}><hed>Login</hed></div>    
         <div style={{ width:"200px", height:"50px" }}></div>
         <div style={{ animation:anim4, height:"40px"}}>
           Username
+          {error}
         </div>
         <div>
           <input 
@@ -110,14 +163,20 @@ function passwordForgor() {
           -----------------------------
           </p1>
         </div>
-        
         <div>
           <button onClick={usernameForgor} style={{ animation:anim4, borderRadius:"10px", backgroundColor:"white", border:"3px solid black", width:"300px" }}>Forgot Username?</button><br/>
           <button onClick={guest} style={{ animation:anim4, borderRadius:"10px", backgroundColor:"white", border:"3px solid black", width:"300px" }}>Sign In as Guest</button>
         </div>
+        <div>
+        <p1 style={{animation:anim4}}>
+          -----------------------------
+          </p1>
+        </div>
+        <div>
+          <Link href="/signup"><button onClick={usernameForgor} style={{ animation:anim4, borderRadius:"10px", backgroundColor:"white", border:"3px solid black", width:"300px" }}>New? Wanna create an account?</button></Link><br/>
+        </div>
       </div>
-          
-          </th>
+    </th>
           
           
           
@@ -145,8 +204,12 @@ function passwordForgor() {
           Password
         </div>
         <div>
-          <input style={{ animation:anim, borderRadius:"10px", backgroundColor:"white", border:"3px solid black", width:"300px", padding:"2px" }}
-                onChange={(e) => setPass(e.target.value)}/><br/>
+          <input style={{ animation:anim, borderRadius:"10px 0px 0px 10px", backgroundColor:"white", border:"3px solid black", width:"275px", padding:"2px" }}
+                onChange={(e) => setPass(e.target.value)}
+                type={tex}
+            />
+            <button onClick={showpass} style={{ animation:anim, width:'25px', height:'25px', padding:'0px', border:"3px solid black" }}></button>
+          <br/>
         </div>
         <div style={{ height:"40px"}}>
         <button onClick={password} style={{ animation:anim, borderRadius:"10px", backgroundColor:"white", border:"3px solid black", width:"300px" }}>Login</button>

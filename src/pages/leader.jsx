@@ -129,7 +129,7 @@ export default function About() {
           </tr>
           <tr>
             <th>3rd</th>
-            <th>Jen</th>
+            <th>Guest User</th>
             <th>78 Lines</th>
             <th>5/16/22</th>
           </tr>
